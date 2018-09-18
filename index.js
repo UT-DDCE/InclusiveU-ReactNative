@@ -1,31 +1,12 @@
 import React, {Component} from 'react';
-import { AppRegistry, StyleSheet, View } from 'react-native';
+import { AppRegistry,StyleSheet, View, TouchableWithoutFeedback } from 'react-native';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
+import Router from './routes';
 
 export default class InclusiveU extends Component{
   render(){
     return(
-      <View style={styles.container}>
-        <MapView provider={PROVIDER_GOOGLE} style={styles.mapContainer}
-          initialRegion={{
-            latitude: 30.284884,
-            longitude:  -97.733466,
-            latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421,
-          }}
-        />
-
-        <View style={styles.topBar}>
-          <View style = {styles.hamburger}>
-            <View style = {styles.smallRectangle}>
-            </View>
-            <View style = {styles.smallRectangle}>
-            </View>
-            <View style = {styles.smallRectangle}>
-            </View>
-          </View>
-        </View>
-      </View>
+      <Router/>
     );
   }
 }
